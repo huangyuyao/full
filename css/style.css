@@ -1,0 +1,706 @@
+/* Global */
+:root {
+  --primary: #CF3A3A;
+  --light: #FFFFFF;
+  --dark: #2C4251;
+}
+
+@keyframes slideInEffect {
+  from {
+      opacity: 0;
+      transform: translateX(-10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+body {
+  background-color: var(--dark);
+  color: var(--light);
+  font-size: 16px;
+  font-family: "Caveat";
+}
+
+.skip{
+  font-family: Georgia;
+  animation-name: jump;
+  animation-duration: 4s;
+}
+
+.current, button{
+  padding: 10px;
+  background-color: rgb(20, 21, 43);
+  color: bisque
+}
+
+.gal {
+  display: grid;
+  grid-template-columns: 1fr; /* This makes images stack on top of each other */
+  grid-row-gap: 20px; /* This gives a gap of 20px between the images */
+  align-items: center;
+}
+
+div {
+  display: grid;
+  grid-template-columns: 1fr; /* This makes images stack on top of each other */
+  grid-row-gap: 20px; /* This gives a gap of 20px between the images */
+}
+
+button{
+  max-width: 100%;
+  height: auto;
+  border: solid 2px rgb(248, 240, 240);
+  background-color: var(--color-background);
+  border-radius: 15px;
+  font-family: Georgia;
+  font-weight: bold;
+  font-size: large;
+  font-style:italic;
+}
+
+.location{
+  background-color: #2f4f4f;
+  padding: 12px;
+  border: 1px solid #555;
+}
+
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #222;
+  color: #24201b;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-family: 'Georgia', serif;
+  color: rgb(3, 29, 40);
+  text-align: center;
+
+}
+
+h2 {
+  font-size: 1.5em;
+  font-family: 'Caveat', serif;
+  color: rgb(8, 84, 94);
+  font-weight: bold;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.2em;
+  font-family: 'Georgia', serif;
+  color: #f8deb5;
+}
+
+p {
+  font-size: 1em;
+  font-family: 'Arial', serif;
+  line-height: 1.25;
+}
+
+nav li{
+  display:block ;
+  padding: 10px;
+}
+
+nav a {
+  color: #000000; 
+  text-decoration: none;
+  border: 2px solid #555; 
+  border-radius: 20px;
+  padding: 5px 10px; 
+  transition: background-color 0.3s;
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+nav, button{
+  background-color: #f8deb5;
+  color:var(--dark);
+  padding: 7px; 
+  text-align: center;
+  animation: bgColorChange 4s;
+  animation-name: jump;
+  animation-duration: 4s;
+
+
+}
+
+@keyframes bgColorChange {
+  from {background-color: #f8deb5;}
+  to {background-color: #222;} 
+}
+
+footer{
+  background-color: #222;
+  color: #f8deb5;
+  padding-top: 25px;
+  text-align: center;
+}
+
+.text-overlay{
+  background-color: rgba(248, 222, 181, 0.7);
+  border: 8px solid #333;
+  padding: 25px;
+}
+
+.skip{
+  display: none;
+
+  background-image: url('images/bg1.jpg'); /* Set the background image */
+  background-size: cover; /* Cover the entire area of the element */
+  background-position: center; /* Center the image in the element */
+  background-repeat: no-repeat; /* Do not repeat the image */
+}
+
+
+  /* Define custom properties for light and dark themes */
+  :root {
+    --color-text-light: #FFFFFF;
+    --color-text-dark: #000000;
+    --color-bg-light: #e8f6ed;
+    --color-bg-dark: #333333;
+  }
+  
+
+* Basic Styles and Color Palette */
+body {
+  background-color: #2b2b2b; /* Darker shade for contrast */
+  color: #f5f5f5; /* Softer shade of off-white for readability */
+  font-family: 'Arial', sans-serif; /* Using a simpler font stack */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  padding: 20px;
+  font-size: large;
+}
+
+h1, h2, h3, p {
+  margin: 20px 0;
+}
+
+
+/* Image Styles */
+img {
+  width: 400px;
+  height: auto;
+  border: 2px solid #555;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s; 
+}
+
+figcaption{
+  font-size: 1.5em;
+ }
+
+img:hover {
+  transform: scale(1.05); /* Slightly enlarge image on hover */
+}
+
+/* Navigation Styles */
+nav {
+  background-color: #3d3d3d; /* Using a mid-dark gray */
+  padding: 10px;
+  text-align: left;
+  transition: background-color 0.3s;
+}
+
+nav:hover {
+  background-color: #292929; /* Slightly darker shade on hover */
+}
+
+nav li {
+  padding: 10px 15px;
+}
+
+nav a {
+  color: #f5f5f5; /* Off-white for better contrast */
+  text-decoration: none;
+  border: 2px solid #555; /* A lighter border */
+  border-radius: 20px;
+  padding: 5px 10px; /* Slightly more horizontal padding */
+  transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+nav a:hover {
+  background-color: #555;
+  border-color: #f5f5f5;
+}
+
+/* Typography and Visual Hierarchy */
+h1 {
+  font-size: 2.5em; /* Using em for relative scaling */
+  text-align: center;
+  font-weight: bold; /* Bold for headings */
+}
+
+h2 {
+  font-size: 2em;
+  text-align: center;
+  font-weight: normal; /* Lighter weight for sub-headings */
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: normal;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.6; /* Improved line-height for readability */
+}
+
+
+#navigation-menu {
+  display: none;
+  background: #333; /* Dark background for the menu */
+  color: white;
+  text-align: center; /* Center align the menu items */
+  padding: 10px 0; /* Padding around the menu */
+  
+}
+
+#navigation-menu ul {
+  list-style: none; /* Remove the default list styling */
+  margin: 0; /* Reset default margin */
+  padding: 0; /* Reset default padding */
+  display: inline-block; /* Align the list items in a row */
+}
+
+#navigation-menu li {
+  display: inline; /* Display list items inline */
+  margin-right: 20px; /* Space between menu items */
+
+ 
+}
+
+#navigation-menu li:last-child {
+  margin-right: 0; /* No margin after the last item */
+}
+
+#navigation-menu a {
+  color: white; /* Text color for menu items */
+  font-size: xx-large;
+  text-decoration: none; /* No underline for links */
+  padding: 5px 10px; /* Padding to make clickable area larger */
+  transition: background-color 0.3s; /* Smooth background color transition for hover */
+  
+}
+
+#navigation-menu a:hover {
+  background-color: #555; /* Darker background on hover */
+  border-radius: 5px; /* Rounded corners on hover */
+}
+
+
+@keyframes jump {
+  0%   {background-color:#3a97b3; left:0px; top:0px;}
+  25%  {background-color:#ed437c; left:200px; top:0px;}
+  50%  {background-color:#7fad64; left:200px; top:200px;}
+  75%  {background-color:#f7a72e; left:0px; top:200px;}
+  100% {background-color:#3a97b3; left:0px; top:0px;}
+}
+
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+    scroll-behavior: auto; 
+  }
+  nav{
+    animation: none;
+  }
+
+  .skip {
+    display: block;
+  }
+
+  .skip a:focus {
+    top: 30px;
+  }
+
+  .skip a {
+    background: #f8deb5;
+    left: 0;
+    padding: 5px;
+    transition: top 0.8s ease-out;
+    z-index: 1;
+    position: absolute;
+    top: -35px;
+  }
+
+  .animated-gif{
+    display: none;
+  }
+
+  h1, h2, h3{
+    animation: none;
+  }
+  }
+
+
+
+  /* Respond to user's preference for light mode */
+  @media (prefers-color-scheme: light) {
+    :root {
+      --color-text: var(--color-text-dark);
+      --color-background: var(--color-bg-light);
+    }
+    h3{
+      color:#006400;
+    }
+
+#navigation-menu {
+  background: #e8f6ed; /* Dark background for the menu */
+  color: #006400;
+}
+
+#navigation-menu a{
+  background: #e8f6ed; /* Dark background for the menu */
+  color: #448f44;
+}
+
+nav {
+  background: #e8f6ed; /* Dark background for the menu */
+  color: #006400;
+}
+
+nav a{
+  background: #e8f6ed; /* Dark background for the menu */
+  color: #006400;
+}
+  }
+  
+  /* Respond to user's preference for dark mode */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-text: var(--color-text-light);
+      --color-background: var(--color-bg-dark);
+    }
+
+    h1, h2{
+      color: rgb(237, 245, 226);
+    }
+  }
+  
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+  }
+
+/* Flexbox for the navigation list */
+nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap; /* If the screen is too narrow, items will wrap to the next line */
+}
+
+nav li {
+  margin-right: 10px; /* Space between list items */
+}
+
+
+/* TABLET styles */
+@media screen and (min-width: 600px) and (max-width: 990px) {
+
+  nav ul {
+    display: flex;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Responsive nav layout */
+    gap: 10px;
+    justify-content: center;
+
+  }
+
+  /* Interactive changes */
+  nav a:hover,
+  nav a:focus {
+    background-color: var(--primary); /* Interactive state */
+    color: var(--light);
+    border-color: var(--primary);
+  }
+
+  #navigation-menu{
+  display: block;
+  }
+
+  #navigation-menu a {
+    font-size: x-large;
+  }
+
+  /* Skip to Content becomes visible */
+  .skip {
+    display: block; /* Display the skip link */
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    z-index: 100; /* Higher than other elements */
+    background: var(--primary);
+    color: var(--light);
+    padding: 10px;
+    border-radius: 5px; /* Optional: rounded corners */
+    text-decoration: none;
+  
+  }
+
+  .skip a:focus {
+    display: block;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    background: var(--primary);
+    color: var(--light);
+    text-decoration: none;
+    z-index: 2000;
+    
+  }
+
+/* Make sure the page content does not go under the skip link */
+body {
+  padding-top: 50px; 
+  flex-wrap: wrap;
+  margin-right: 25px;
+  margin-left: 25px;
+
+}
+
+ .cover{
+  justify-content: center;
+  align-items: center;
+ }
+
+  .cover img{
+    width: 700px;
+    align-items: center;
+  }
+
+
+  .gal{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: auto;
+  }
+
+  .gal img {
+   
+    height: 250px; /* Fixed height for all images */
+    width: auto; /* Width is set to auto to maintain aspect ratio */
+    object-fit: cover; /* This will cover the area of the fixed height, potentially cropping the image */
+    border-radius: 15px; /* Rounded corners for the images */
+    animation: fadeInAnimation ease 5s;
+    animation-fill-mode: forwards; /* Keep the state after the animation ends */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+  }
+
+
+
+  /* Define custom properties for light and dark themes */
+  :root {
+    --color-text-light: #FFFFFF;
+    --color-text-dark: #000000;
+    --color-bg-light: #e8f6ed;
+    --color-bg-dark: #333333;
+  }
+  
+  
+  
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+  }
+  
+
+h1, h2 {
+  color: #222020; 
+  text-shadow: 0 0 10px #00E6E6, 0 0 20px #00E6E6, 0 0 30px #00E6E6, 0 0 40px #00E6E6, 0 0 50px #00E6E6, 0 0 60px #00E6E6, 0 0 70px #00E6E6;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+/* Keyframes for glow animation */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #00E6E6, 0 0 20px #00E6E6, 0 0 30px #00E6E6, 0 0 40px #00E6E6, 0 0 50px #00E6E6, 0 0 60px #00E6E6, 0 0 70px #00E6E6;
+  }
+  to {
+    text-shadow: 0 0 20px #00E6E6, 0 0 30px #00E6E6, 0 0 40px #00E6E6, 0 0 50px #00E6E6, 0 0 60px #00E6E6, 0 0 70px #00E6E6, 0 0 80px #00E6E6;
+  }
+  
+}
+
+}
+
+
+/* Desktop styles */
+@media screen and (min-width: 990px){
+
+  /* Structural changes */
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr; /* Adjust as per your layout needs */
+    grid-template-rows: auto; /* Adjust based on content */
+    grid-gap: 20px; /* Space between grid items */
+  }
+  
+  nav ul {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  nav ul li{
+    font-size: larger;
+  }
+
+  #navigation-menu{
+    display: block;
+  }  
+  .navigation-menu {
+    font-size: larger;
+  }
+
+  /* Interactive changes */
+  nav a:hover,
+  nav a:focus {
+    background-color: var(--primary); /* Interactive state */
+    color: var(--light);
+    border-color: var(--primary);
+  }
+
+  /* Skip to Content becomes visible */
+  .skip {
+    display: block; /* Display the skip link */
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    z-index: 100; /* Higher than other elements */
+    background: var(--primary);
+    color: var(--light);
+    padding: 10px;
+    border-radius: 5px; /* Optional: rounded corners */
+    text-decoration: none;
+    font-weight: bold; /* Optional: makes it stand out */
+  }
+
+  .skip a:focus {
+    display: block;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    background: var(--primary);
+    color: var(--light);
+    text-decoration: none;
+    z-index: 2000;
+    
+  }
+
+/* Make sure the page content does not go under the skip link */
+body {
+  padding-top: 50px; 
+}
+
+
+  img {
+    border-radius: 50%; /* This will create a circle, adjust as necessary for less roundness */
+  }
+
+  .article {
+    grid-template-columns: 700px 700px; 
+    gap: 10px; /* Add some space between grid items */
+    align-items: center;
+    justify-content: center; 
+  }
+
+  nav ul {
+    font-size: 1.5em;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+  }
+
+ figcaption{
+  font-size: 1.5em;
+ }
+
+ .cover {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 10px;
+  align-items: center; /* Align images vertically */
+  }
+
+.cover img {
+  flex: 0 0 auto; /* Do not grow, do not shrink, and base size on the width of the image itself */
+  height: 500px; /* Fixed height for all images */
+  width: auto; /* Width is set to auto to maintain aspect ratio */
+  object-fit: cover; /* This will cover the area of the fixed height, potentially cropping the image */
+  border-radius: 15px; /* Rounded corners for the images */
+
+  animation: fadeInAnimation ease 5s;
+  animation-fill-mode: forwards; /* Keep the state after the animation ends */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+  .gal {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px;
+    align-items: center; /* Align images vertically */
+
+    }
+  
+
+  .gal img {
+    flex: 0 0 auto; /* Do not grow, do not shrink, and base size on the width of the image itself */
+    height: 200px; /* Fixed height for all images */
+    width: fit-content; /* Width is set to auto to maintain aspect ratio */
+    object-fit: cover; /* This will cover the area of the fixed height, potentially cropping the image */
+    border-radius: 15px; /* Rounded corners for the images */
+
+    animation: fadeInAnimation ease 5s;
+    animation-fill-mode: forwards; /* Keep the state after the animation ends */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+  }
+
+  h1, h2 {
+    text-shadow: 0 0 10px #9ffafa, 0 0 20px #91f8f8, 0 0 30px #c4f3f3, 0 0 40px #c3eeee, 0 0 50px #d9f0f0, 0 0 60px #d3f0f0, 0 0 70px #cff3f3;
+    animation: glow 3s ease-in-out infinite alternate;
+  }
+
+  
+  
+
+  /* Define custom properties for light and dark themes */
+  :root {
+    --color-text-light: #FFFFFF;
+    --color-text-dark: #000000;
+    --color-bg-light: #e8f6ed;
+    --color-bg-dark: #333333;
+  }
+  
+
+  
+
+
+/* Keyframes for glow animation */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgb(238, 241, 180), 0 0 20px rgb(238, 241, 180), 0 0 30px rgb(238, 241, 180), 0 0 40px rgb(238, 241, 180), 0 0 50px rgb(238, 241, 180), 0 0 60px rgb(238, 241, 180), 0 0 70px rgb(238, 241, 180);
+  }
+  to {
+    text-shadow: 0 0 20px  #c7f2f2, 0 0 30px #c7f2f2, 0 0 40px #c7f2f2, 0 0 50px #c7f2f2, 0 0 60px #c7f2f2, 0 0 70px #c7f2f2, 0 0 80px #c7f2f2;
+  }
+  
+}
+
+}
