@@ -82,6 +82,8 @@ h1 {
   color: rgb(3, 29, 40);
   text-align: center;
 
+  
+
 }
 
 h2 {
@@ -102,6 +104,8 @@ p {
   font-size: 1em;
   font-family: 'Arial', serif;
   line-height: 1.25;
+
+ 
 }
 
 nav li{
@@ -129,7 +133,13 @@ nav, button{
   animation-name: jump;
   animation-duration: 4s;
 
+}
 
+nav:hover {
+  background-image: url('../images/bg4.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 @keyframes bgColorChange {
@@ -179,6 +189,7 @@ body {
   grid-gap: 20px;
   padding: 20px;
   font-size: large;
+
 }
 
 h1, h2, h3, p {
